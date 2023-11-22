@@ -27,6 +27,7 @@ def site(message):
 
 @bot.message_handler(commands=['start'])  # обработка команд
 def start_message(message):
+
     date = datetime.now()
     a = str(date)
     index_date = a[10:16]
@@ -73,11 +74,11 @@ def info(message):
                   ("Empty DataFrame", "").replace("[", "").replace
                   ("]", "").replace("Index:", ""))
 
-    if message.text.lower() == 'кто на смене?' and 'КТО НА СМЕНЕ?' and 'Кто на смене?':
+    if message.text.lower() == 'кто на смене?' and 'КТО НА СМЕНЕ?' and 'Кто на смене?' or 'Доброе утро! Кто сегодня на смене?':
         bot.send_message(message.chat.id,
-                         f'На смене сегодня, {delete_str}', )
+                         f'На смене сегодня {delete_str.replace("00:00:00", "")}\n')
 
-    elif message.text.lower() == 'Доброе утро! Кто сегодня на смене?':
+    elif message.text.lower() == 'Доброе утро! Кто из мастеров сегодня на смене?':
         bot.send_message(message.chat.id,
                          f'На смене сегодня, {delete_str}', )
 
