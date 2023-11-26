@@ -2,7 +2,9 @@ import pandas as pd
 import telebot
 import webbrowser
 from datetime import datetime
+import os
 
+FILENAME = "/data/todo.json" if "AMVERA" in os.environ else "todo.json"
 bot = telebot.TeleBot('6600850602:AAGPhNvuwEbtw5UVsR0XozxwqRJCrxYJsnE')
 
 

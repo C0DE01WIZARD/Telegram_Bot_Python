@@ -6,6 +6,6 @@ meta:
 build:
   requirementsPath: requirements.txt
 run:
-  scriptName: Telegram_worker_bot.py
+  scriptName: App.py
   persistenceMount: /data
   containerPort: 80
